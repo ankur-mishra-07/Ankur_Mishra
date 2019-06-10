@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".view.activities.BaseActivity">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.monsanto.ankur_mishra.viewModel.BaseActivityViewModel" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!-- First Request -->
+            <TextView
+                android:id="@+id/ten_char_request"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="16dp"
+                android:text="@{viewModel.firstData}"
+                android:textSize="19sp" />
+
+            <!-- Second Request -->
+            <TextView
+                android:id="@+id/every_ten_char_request"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="16dp"
+                android:text="@{viewModel.secondData}"
+                android:textSize="19sp"
+                />
+
+
+            <!-- Third Request -->
+            <TextView
+                android:id="@+id/count_word_request"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="16dp"
+                android:text="@{viewModel.thirdData}"
+                android:textSize="19sp"
+                />
+
+            <Button
+                android:id="@+id/fetch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="@{viewModel::onButtonClick}"
+                android:text="@string/fetch"
+               />
+
+        </LinearLayout>
+    </ScrollView>
+</layout>
