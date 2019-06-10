@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Ankur_Mishra</string>
+    <string name="mainActivity_title">MainActivity</string>
+    <string name="fetch">Fetch</string>
+    <string name="frstRequest">First Request Result</string>
+</resources>
